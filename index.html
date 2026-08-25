@@ -654,6 +654,15 @@
     word-break: break-all;
   }
 
+  /* enlace en linea: el propio nombre es clicable.
+     Sin font-size propio para que encoja con el js-fit. */
+  .link-name {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+  }
+
   .hotel-block { margin-bottom: 1.1em; }
   .hotel-name {
     margin-bottom: 4px;
@@ -1023,14 +1032,18 @@
     { n: 30, type: 'text', section: 'shuttle' },
     { n: 31, type: 'img', src: 'p29.jpg' },
     { n: 32, type: 'text-img', src: 'nikotto-bus.jpg', section: 'nikotto', imgStyle: { maxWidth: '90%' } },
-    { n: 33, type: 'img', src: 'p31.jpg' },
-    { n: 34, type: 'text', eyebrow: 'ch4', title: 'benefits', subsection: 'canteen' },
-    { n: 35, type: 'img', src: 'p33.jpg' },
-    { n: 36, type: 'text', section: 'skipass' },
-    { n: 37, type: 'img', src: 'p35.jpg' },
-    { n: 38, type: 'text', section: 'restaurants' },
-    { n: 39, type: 'img', src: 'p37.jpg' },
-    { n: 40, type: 'closing' },
+    { n: 33, type: 'img', src: 'driverlicence.jpg' },
+    { n: 34, type: 'text', section: 'driverLicense' },
+    { n: 35, type: 'img', src: 'drivingschool.jpg' },
+    { n: 36, type: 'text', section: 'driverLicenseScratch' },
+    { n: 37, type: 'img', src: 'p31.jpg' },
+    { n: 38, type: 'text', eyebrow: 'ch4', title: 'benefits', subsection: 'canteen' },
+    { n: 39, type: 'img', src: 'p33.jpg' },
+    { n: 40, type: 'text', section: 'skipass' },
+    { n: 41, type: 'img', src: 'p35.jpg' },
+    { n: 42, type: 'text', section: 'restaurants' },
+    { n: 43, type: 'img', src: 'p37.jpg' },
+    { n: 44, type: 'closing' },
   ];
 
 
@@ -1107,6 +1120,8 @@
       supermarkets:    `Supermarkets - Kutchan & Niseko`,
       shuttle:         `Team Members Shuttle Bus`,
       nikotto:         `Nikotto Bus`,
+      driverLicense:   `Getting a Driver's License (Gaimen Kirikae)`,
+      driverLicenseScratch: `Getting a Driver's License From Scratch`,
       skipass:         `Obtain a Ski Pass`,
       canteen:         `Utari Canteen`,
       restaurants:     `50% off at Our Restaurants`,
@@ -1130,9 +1145,11 @@
         { chapter: true, page: 28, label: `Chapter 3 – Transportation` },
         { page: 30, label: `TM Shuttle Bus and Airport Bus` },
         { page: 32, label: `Nikotto Bus (Shared Bus service)` },
-        { chapter: true, page: 34, label: `Chapter 4 – Special Benefits` },
-        { page: 36, label: `Obtaining a Ski Pass` },
-        { page: 38, label: `Hotel's Restaurants 50% off` },
+        { page: 34, label: `Driver's License Conversion (Gaimen Kirikae)` },
+        { page: 36, label: `Driver's License From Scratch` },
+        { chapter: true, page: 38, label: `Chapter 4 – Special Benefits` },
+        { page: 40, label: `Obtaining a Ski Pass` },
+        { page: 42, label: `Hotel's Restaurants 50% off` },
       ],
     },
 
@@ -1233,17 +1250,33 @@
         <p>Online advance booking is also available.</p>
         <p><a href="https://nikotto.nisekobus.co.jp/userLoginPageLang" target="_blank" class="info-link">https://nikotto.nisekobus.co.jp/userLoginPageLang</a></p>
       `,
+
       34: `
+        <p>If you hold a valid foreign driver's license, you can usually convert it into a Japanese one (Gaimen Kirikae) instead of starting from scratch. Note: if you have a Work Visa or other resident status, you cannot drive using an International Driving Permit alone — conversion is required.</p>
+        <p>Requirements vary by nationality: some countries only need a document check and an eyesight test, others also require a written and practical test. Rules changed in October 2025, so please confirm current requirements before applying.</p>
+        <p><strong>You'll generally need:</strong></p>
+        <ul><li>Valid foreign license + official Japanese translation (JAF)</li><li>Passport(s) showing 3+ months in the issuing country after getting the license</li><li>Residence Card</li></ul>
+        <p>Applications are handled at the Sapporo Driver's License Center, about 2 hours from Niseko.</p>
+        <p><a href="https://www.police.pref.hokkaido.lg.jp/guide/menkyo/gai_menkyo-kirikae.html" target="_blank" class="info-link">Hokkaido Police — License Conversion Info</a></p>
+      `,
+
+      36: `
+        <p>If you don't hold any driver's license, you'll need to enroll at a licensed driving school and complete the full course, then take the same exams Japanese citizens take. This route takes much longer and costs significantly more than converting an existing license — plan for several weeks and a significant cost.</p>
+        <p>Lessons at these schools are conducted in Japanese only, so you'll likely need help from a Japanese-speaking colleague to enroll and follow the coursework.</p>
+        <p><strong>Nearby driving schools:</strong></p>
+        <ul><li><a href="http://kutchan-ds.o.oo7.jp/" target="_blank" class="link-name">Kutchan Driving School (倶知安自動車学校)</a> — Hirafu, Kutchan<br>T. 0136-22-1573</li><li><a href="https://www.keishin-g.com/yoichi/" target="_blank" class="link-name">Yoichi Driving School (余市自動車学校)</a> — Yoichi, <br>~45 km<br>T. 0135-22-3393</li><li><a href="https://www.hokkaidochuo.co.jp/otaru" target="_blank" class="link-name">Otaru Chuo Driving School (小樽中央自動車学校)</a> — Otaru, ~55 km<br>T. 0134-26-3515</li></ul>
+      `,
+      38: `
         <p>Utari Canteen opens from 7AM to 7PM daily with 4 daily menu, fresh salad corner and bakery corner. During working days we have available two meals tickets.</p>
         <p>Once a year, we vote for our favourite dish and it'll be added into the menu, plus we have Häagen-Dazs ice cream every day with new flavors (required 1 meal ticket). To get the meal ticket, simply tap your ID card at the entrance scanner.</p>
         <p>Utari canteen is a place to rest and share stories with your teammates during your break. Please note that meals have to be taken within the duty hours.</p>
       `,
-      36: `
+      40: `
         <p>One of the best perks of working here is the mountain itself. HR Team provides these daily mountain passes. It's your ticket to the world-famous powder snow right outside our doors.</p>
         <div class="alert-box">The pass is personal to you and is strictly not shareable with anyone else.</div>
         <p>Please, check with HR Team if you are eligible for ski pass based on your employment status. It is mandatory to all to obtain the insurance that covers the third-party liability for snow activities.</p>
       `,
-      38: `
+      42: `
         <p>All Team Members get 50% off at our restaurants. Ask your manager for details and black-out periods.</p>
         <ul><li><strong>Goshiki</strong> — Five Colors, One Harmony!</li><li><strong>Zento</strong> — Asian traditions with Hokkaido's abundance.</li><li><strong>Melt Bar &amp; Grill</strong> — All-You-Can-Eat Buffet.</li><li><strong>The Flame</strong> — Fire, Foods &amp; Wines. Daily Live Jazz.</li><li><strong>Ezo Pub</strong> — Burgers &amp; Sushi All-You-Can-Eat.</li><li><strong>Sisam</strong> — Japanese Restaurant.</li></ul>
       `,
@@ -1294,6 +1327,8 @@
       supermarkets:    `スーパーマーケット - 倶知安・ニセコ`,
       shuttle:         `チームメンバーシャトルバス`,
       nikotto:         `にこっとバス`,
+      driverLicense:   `運転免許証の取得（外免切替）`,
+      driverLicenseScratch: `一から運転免許を取得する`,
       skipass:         `スキーパスの取得`,
       canteen:         `ウタリ食堂`,
       restaurants:     `レストラン50%割引`,
@@ -1317,9 +1352,11 @@
         { chapter: true, page: 28, label: `第3章 – 交通手段` },
         { page: 30, label: `シャトルバス・空港バス` },
         { page: 32, label: `にこっとバス` },
-        { chapter: true, page: 34, label: `第4章 – 特別特典` },
-        { page: 36, label: `スキーパスの取得` },
-        { page: 38, label: `ホテルレストラン 50%割引` },
+        { page: 34, label: `運転免許証の切替（外免切替）` },
+        { page: 36, label: `一から運転免許を取得する` },
+        { chapter: true, page: 38, label: `第4章 – 特別特典` },
+        { page: 40, label: `スキーパスの取得` },
+        { page: 42, label: `ホテルレストラン 50%割引` },
       ],
     },
 
@@ -1419,17 +1456,33 @@
         <p>オンラインでの事前予約も可能です。</p>
         <p><a href="https://nikotto.nisekobus.co.jp/userLoginPageLang" target="_blank" class="info-link">https://nikotto.nisekobus.co.jp/userLoginPageLang</a></p>
       `,
+
       34: `
+        <p>有効な外国の運転免許証をお持ちの場合、一から取得する代わりに、日本の運転免許証へ切り替える（外免切替）ことができます。ご注意：就労ビザなどの在留資格をお持ちの方は、国際運転免許証だけで運転することはできません。切替が必要です。</p>
+        <p>必要な条件は国籍によって異なります。書類確認と適性検査（視力）のみの国もあれば、学科試験と技能試験も必要な国もあります。2025年10月に制度が変更されましたので、申請前に必ず最新の要件をご確認ください。</p>
+        <p><strong>一般的に必要なもの：</strong></p>
+        <ul><li>有効な外国運転免許証＋日本語の公式翻訳文（JAF）</li><li>免許取得後に発給国に通算3か月以上滞在したことがわかるパスポート（複数冊可）</li><li>在留カード</li></ul>
+        <p>申請は、ニセコから約2時間の札幌運転免許試験場で受け付けています。</p>
+        <p><a href="https://www.police.pref.hokkaido.lg.jp/guide/menkyo/gai_menkyo-kirikae.html" target="_blank" class="info-link">北海道警察 — 外国免許切替のご案内</a></p>
+      `,
+
+      36: `
+        <p>運転免許をまったくお持ちでない場合は、指定自動車教習所に入校して全課程を修了し、日本人と同じ試験を受ける必要があります。この方法は既存の免許を切り替えるよりもはるかに時間がかかり、費用も大幅に高くなります。数週間の期間と相応の費用を見込んでください。</p>
+        <p>これらの教習所の授業は日本語のみで行われるため、入校手続きや授業の受講には、日本語を話せる同僚のサポートが必要になるでしょう。</p>
+        <p><strong>近隣の自動車教習所：</strong></p>
+        <ul><li><a href="http://kutchan-ds.o.oo7.jp/" target="_blank" class="link-name">倶知安自動車学校</a> — 倶知安町比羅夫<br>T. 0136-22-1573</li><li><a href="https://www.keishin-g.com/yoichi/" target="_blank" class="link-name">余市自動車学校</a> — 余市町（約45km）<br>T. 0135-22-3393</li><li><a href="https://www.hokkaidochuo.co.jp/otaru" target="_blank" class="link-name">小樽中央自動車学校</a> — 小樽市（約55km）<br>T. 0134-26-3515</li></ul>
+      `,
+      38: `
         <p>ウタリ食堂は毎日午前7時から午後7時まで営業しており、4種類の日替わりメニュー、新鮮なサラダコーナー、ベーカリーコーナーを提供しています。勤務日には、2枚の食事チケットをご利用いただけます。</p>
         <p>年に一度、お気に入りの料理に投票していただき、メニューに追加されます。さらに、毎日新しいフレーバーのハーゲンダッツアイスクリームもご用意しています（食事チケット1枚が必要です）。食事チケットを受け取るには、入口のスキャナーにIDカードをかざすだけです。</p>
         <p>ウタリ食堂は、休憩時間中に仲間と一緒に休み、語り合う場所です。お食事は、必ず勤務時間内にお取りください。</p>
       `,
-      36: `
+      40: `
         <p>ここで働く最大の魅力の一つは、山そのものです。人事チームがこの毎日利用できるマウンテンパスを提供しています。これは、私たちのドアのすぐ外に広がる、世界的に有名なパウダースノーへの入場券です。</p>
         <div class="alert-box">このパスはあなた個人に紐づくもので、他の方と共有することは固く禁じられています。</div>
         <p>雇用形態によりスキーパスの対象となるかどうか、人事チームにご確認ください。雪上アクティビティにおける第三者賠償責任をカバーする保険への加入は、全員必須です。</p>
       `,
-      38: `
+      42: `
         <p>すべてのチームメンバーは、当施設のレストランで50%割引をご利用いただけます。詳細や利用不可期間については、マネージャーにお尋ねください。</p>
         <ul><li><strong>五色（Goshiki）</strong> — 五つの色、一つの調和！</li><li><strong>膳道（Zento）</strong> — 北海道の豊かさとアジアの伝統。</li><li><strong>メルト バー＆グリル</strong> — 食べ放題ビュッフェ。</li><li><strong>ザ・フレーム</strong> — 炎、フード＆ワイン。毎日ライブジャズ演奏。</li><li><strong>エゾパブ</strong> — バーガー＆寿司食べ放題。</li><li><strong>四四三（Sisam）</strong> — 日本料理レストラン。</li></ul>
       `,
@@ -1480,6 +1533,8 @@
       supermarkets:    `Supermercados - Kutchan y Niseko`,
       shuttle:         `Autobús Lanzadera`,
       nikotto:         `Autobús Nikotto`,
+      driverLicense:   `Obtener la licencia de conducir (Gaimen Kirikae)`,
+      driverLicenseScratch: `Obtener la licencia de conducir desde cero`,
       skipass:         `Obtener un Pase de Esquí`,
       canteen:         `Cantina Utari`,
       restaurants:     `50% de descuento en nuestros Restaurantes`,
@@ -1503,9 +1558,11 @@
         { chapter: true, page: 28, label: `Capítulo 3 – Transporte` },
         { page: 30, label: `Autobús Lanzadera y Aeropuerto` },
         { page: 32, label: `Autobús Nikotto` },
-        { chapter: true, page: 34, label: `Capítulo 4 – Beneficios Especiales` },
-        { page: 36, label: `Obtener un Pase de Esquí` },
-        { page: 38, label: `50% de descuento en Restaurantes` },
+        { page: 34, label: `Canje de licencia de conducir (Gaimen Kirikae)` },
+        { page: 36, label: `Licencia de conducir desde cero` },
+        { chapter: true, page: 38, label: `Capítulo 4 – Beneficios Especiales` },
+        { page: 40, label: `Obtener un Pase de Esquí` },
+        { page: 42, label: `50% de descuento en Restaurantes` },
       ],
     },
 
@@ -1605,17 +1662,33 @@
         <p>También está disponible la reserva anticipada en línea.</p>
         <p><a href="https://nikotto.nisekobus.co.jp/userLoginPageLang" target="_blank" class="info-link">https://nikotto.nisekobus.co.jp/userLoginPageLang</a></p>
       `,
+
       34: `
+        <p>Si tienes una licencia de conducir extranjera vigente, normalmente puedes canjearla por una japonesa (Gaimen Kirikae) en lugar de empezar desde cero. Nota: si tienes visa de trabajo u otro estatus de residencia, no puedes conducir solo con un Permiso Internacional de Conducir — el canje es obligatorio.</p>
+        <p>Los requisitos varían según la nacionalidad: algunos países solo requieren la revisión de documentos y un examen de la vista, otros también exigen examen teórico y práctico. Las normas cambiaron en octubre de 2025, así que confirma los requisitos actuales antes de solicitarlo.</p>
+        <p><strong>Por lo general necesitarás:</strong></p>
+        <ul><li>Licencia extranjera vigente + traducción oficial al japonés (JAF)</li><li>Pasaporte(s) que demuestren 3+ meses en el país emisor después de obtener la licencia</li><li>Tarjeta de residencia</li></ul>
+        <p>Las solicitudes se tramitan en el Sapporo Driver's License Center, a unas 2 horas de Niseko.</p>
+        <p><a href="https://www.police.pref.hokkaido.lg.jp/guide/menkyo/gai_menkyo-kirikae.html" target="_blank" class="info-link">Policía de Hokkaido — Información sobre el canje de licencias</a></p>
+      `,
+
+      36: `
+        <p>Si no tienes ninguna licencia de conducir, deberás inscribirte en una autoescuela autorizada y completar el curso completo, y luego presentar los mismos exámenes que los ciudadanos japoneses. Esta vía toma mucho más tiempo y cuesta bastante más que canjear una licencia existente — calcula varias semanas y un costo considerable.</p>
+        <p>Las clases en estas escuelas se imparten únicamente en japonés, por lo que probablemente necesitarás la ayuda de un compañero que hable japonés para inscribirte y seguir el curso.</p>
+        <p><strong>Autoescuelas cercanas:</strong></p>
+        <ul><li><a href="http://kutchan-ds.o.oo7.jp/" target="_blank" class="link-name">Kutchan Driving School (倶知安自動車学校)</a> — Hirafu, Kutchan<br>T. 0136-22-1573</li><li><a href="https://www.keishin-g.com/yoichi/" target="_blank" class="link-name">Yoichi Driving School (余市自動車学校)</a> — Yoichi, ~45 km<br>T. 0135-22-3393</li><li><a href="https://www.hokkaidochuo.co.jp/otaru" target="_blank" class="link-name">Otaru Chuo Driving School (小樽中央自動車学校)</a> — Otaru, ~55 km<br>T. 0134-26-3515</li></ul>
+      `,
+      38: `
         <p>La Cantina Utari abre de 7 de la mañana a 7 de la tarde todos los días, con 4 opciones de menú diario, un rincón de ensaladas frescas y un rincón de panadería. Durante los días laborables, tenemos disponibles dos tickets de comida.</p>
         <p>Una vez al año, votamos por nuestro plato favorito y se añadirá al menú, además tenemos helado Häagen-Dazs todos los días con nuevos sabores (se requiere 1 ticket de comida). Para obtener el ticket de comida, simplemente pasa tu tarjeta de identificación por el escáner de la entrada.</p>
         <p>La Cantina Utari es un lugar para descansar y compartir historias con tus compañeros de equipo durante tu descanso. Ten en cuenta que las comidas deben tomarse dentro del horario de trabajo.</p>
       `,
-      36: `
+      40: `
         <p>Una de las mejores ventajas de trabajar aquí es la propia montaña. El equipo de RRHH proporciona estos pases de montaña diarios. Es tu entrada a la nieve en polvo, mundialmente famosa, justo a las puertas de nuestras instalaciones.</p>
         <div class="alert-box">El pase es personal e intransferible, y no se puede compartir con nadie más bajo ninguna circunstancia.</div>
         <p>Por favor, consulta con el equipo de RRHH si eres elegible para el pase de esquí según tu situación laboral. Es obligatorio para todos obtener el seguro que cubre la responsabilidad civil frente a terceros para actividades en la nieve.</p>
       `,
-      38: `
+      42: `
         <p>Todos los Miembros del Equipo obtienen un 50% de descuento en nuestros restaurantes. Pregunta a tu gerente por los detalles y los periodos de exclusión.</p>
         <ul><li><strong>Goshiki</strong> — ¡Cinco Colores, Una Armonía!</li><li><strong>Zento</strong> — Tradiciones asiáticas con la abundancia de Hokkaido.</li><li><strong>Melt Bar &amp; Grill</strong> — Buffet Libre.</li><li><strong>The Flame</strong> — Fuego, Comida y Vinos. Jazz en vivo diario.</li><li><strong>Ezo Pub</strong> — Hamburguesas y Sushi Libre.</li><li><strong>Sisam</strong> — Restaurante Japonés.</li></ul>
       `,
@@ -1666,6 +1739,8 @@
       supermarkets:    `ซูเปอร์มาร์เก็ต - คุทจังและนิเซโกะ`,
       shuttle:         `รถรับส่งสำหรับสมาชิกทีม`,
       nikotto:         `รถบัส Nikotto`,
+      driverLicense:   `การขอใบขับขี่ญี่ปุ่น (Gaimen Kirikae)`,
+      driverLicenseScratch: `การขอใบขับขี่ตั้งแต่เริ่มต้น`,
       skipass:         `การได้รับพาสสกี`,
       canteen:         `โรงอาหาร Utari`,
       restaurants:     `ส่วนลด 50% ที่ร้านอาหารของเรา`,
@@ -1689,9 +1764,11 @@
         { chapter: true, page: 28, label: `บทที่ 3 – การเดินทาง` },
         { page: 30, label: `รถรับส่งและรถสนามบิน` },
         { page: 32, label: `รถบัส Nikotto` },
-        { chapter: true, page: 34, label: `บทที่ 4 – สิทธิพิเศษ` },
-        { page: 36, label: `การได้รับพาสสกี` },
-        { page: 38, label: `ส่วนลด 50% ที่ร้านอาหาร` },
+        { page: 34, label: `การเปลี่ยนใบขับขี่ (Gaimen Kirikae)` },
+        { page: 36, label: `การขอใบขับขี่ตั้งแต่เริ่มต้น` },
+        { chapter: true, page: 38, label: `บทที่ 4 – สิทธิพิเศษ` },
+        { page: 40, label: `การได้รับพาสสกี` },
+        { page: 42, label: `ส่วนลด 50% ที่ร้านอาหาร` },
       ],
     },
 
@@ -1791,17 +1868,33 @@
         <p>สามารถจองล่วงหน้าออนไลน์ได้เช่นกัน</p>
         <p><a href="https://nikotto.nisekobus.co.jp/userLoginPageLang" target="_blank" class="info-link">https://nikotto.nisekobus.co.jp/userLoginPageLang</a></p>
       `,
+
       34: `
+        <p>หากคุณมีใบขับขี่ต่างประเทศที่ยังไม่หมดอายุ โดยทั่วไปคุณสามารถเปลี่ยนเป็นใบขับขี่ญี่ปุ่นได้ (Gaimen Kirikae) แทนการเริ่มต้นใหม่ทั้งหมด หมายเหตุ: หากคุณถือวีซ่าทำงานหรือสถานะพำนักอื่น ๆ คุณไม่สามารถขับรถโดยใช้ใบอนุญาตขับขี่สากลเพียงอย่างเดียวได้ — ต้องเปลี่ยนเป็นใบขับขี่ญี่ปุ่นเท่านั้น</p>
+        <p>ข้อกำหนดแตกต่างกันไปตามสัญชาติ: บางประเทศเพียงตรวจเอกสารและทดสอบสายตา ส่วนบางประเทศต้องสอบข้อเขียนและสอบปฏิบัติด้วย กฎระเบียบมีการเปลี่ยนแปลงเมื่อเดือนตุลาคม 2025 กรุณาตรวจสอบข้อกำหนดล่าสุดก่อนยื่นเรื่อง</p>
+        <p><strong>โดยทั่วไปคุณจะต้องมี:</strong></p>
+        <ul><li>ใบขับขี่ต่างประเทศที่ยังไม่หมดอายุ + คำแปลภาษาญี่ปุ่นอย่างเป็นทางการ (JAF)</li><li>หนังสือเดินทางที่แสดงว่าคุณอยู่ในประเทศที่ออกใบขับขี่รวมแล้ว 3 เดือนขึ้นไปหลังได้รับใบขับขี่</li><li>บัตรประจำตัวผู้พำนัก (Residence Card)</li></ul>
+        <p>การยื่นเรื่องดำเนินการที่ Sapporo Driver's License Center ห่างจากนิเซโกะประมาณ 2 ชั่วโมง</p>
+        <p><a href="https://www.police.pref.hokkaido.lg.jp/guide/menkyo/gai_menkyo-kirikae.html" target="_blank" class="info-link">ตำรวจฮอกไกโด — ข้อมูลการเปลี่ยนใบขับขี่</a></p>
+      `,
+
+      36: `
+        <p>หากคุณไม่มีใบขับขี่ใด ๆ เลย คุณจะต้องสมัครเรียนที่โรงเรียนสอนขับรถที่ได้รับอนุญาต เรียนจนจบหลักสูตร แล้วสอบแบบเดียวกับที่คนญี่ปุ่นสอบ เส้นทางนี้ใช้เวลานานกว่าและมีค่าใช้จ่ายสูงกว่าการเปลี่ยนใบขับขี่เดิมมาก — ควรเผื่อเวลาหลายสัปดาห์และงบประมาณจำนวนไม่น้อย</p>
+        <p>การเรียนการสอนในโรงเรียนเหล่านี้ใช้ภาษาญี่ปุ่นเท่านั้น คุณจึงน่าจะต้องขอความช่วยเหลือจากเพื่อนร่วมงานที่พูดภาษาญี่ปุ่นได้ ทั้งในการสมัครและการเรียน</p>
+        <p><strong>โรงเรียนสอนขับรถใกล้เคียง:</strong></p>
+        <ul><li><a href="http://kutchan-ds.o.oo7.jp/" target="_blank" class="link-name">Kutchan Driving School (倶知安自動車学校)</a> — ฮิราฟุ, คุตจัง<br>T. 0136-22-1573</li><li><a href="https://www.keishin-g.com/yoichi/" target="_blank" class="link-name">Yoichi Driving School (余市自動車学校)</a> — โยอิจิ, <br>~45 กม.<br>T. 0135-22-3393</li><li><a href="https://www.hokkaidochuo.co.jp/otaru" target="_blank" class="link-name">Otaru Chuo Driving School (小樽中央自動車学校)</a> — โอตารุ, ~55 กม.<br>T. 0134-26-3515</li></ul>
+      `,
+      38: `
         <p>โรงอาหารอุตาริเปิดให้บริการตั้งแต่ 7 โมงเช้าถึง 1 ทุ่มทุกวัน พร้อมเมนูประจำวัน 4 รายการ มุมสลัดสดใหม่ และมุมเบเกอรี่ ในวันทำงานเรามีคูปองอาหารให้ 2 ใบ</p>
         <p>ปีละครั้ง เราจะโหวตเมนูโปรดของเรา และเมนูนั้นจะถูกเพิ่มเข้าไปในรายการอาหาร นอกจากนี้เรายังมีไอศกรีมฮาเก้น-ดาส์ ทุกวันพร้อมรสชาติใหม่ ๆ (ต้องใช้คูปองอาหาร 1 ใบ) การรับคูปองอาหารทำได้ง่าย ๆ เพียงแตะบัตรประจำตัวของคุณที่เครื่องสแกนบริเวณทางเข้า</p>
         <p>โรงอาหารอุตาริเป็นสถานที่พักผ่อนและพูดคุยแบ่งปันเรื่องราวกับเพื่อนร่วมทีมในช่วงเวลาพัก โปรดทราบว่าการรับประทานอาหารต้องอยู่ภายในช่วงเวลาปฏิบัติหน้าที่เท่านั้น</p>
       `,
-      36: `
+      40: `
         <p>หนึ่งในสิทธิประโยชน์ที่ดีที่สุดของการทำงานที่นี่คือภูเขาแห่งนี้เอง ทีมงานฝ่ายทรัพยากรบุคคลมอบบัตรผ่านภูเขารายวันเหล่านี้ให้ ซึ่งเป็นตั๋วของคุณสู่หิมะผงอันเลื่องชื่อระดับโลกที่อยู่ตรงหน้าประตูของเรา</p>
         <div class="alert-box">บัตรผ่านนี้เป็นของส่วนบุคคลของคุณ และห้ามใช้ร่วมกับผู้อื่นโดยเด็ดขาด</div>
         <p>โปรดตรวจสอบกับทีมงานฝ่ายทรัพยากรบุคคลว่าคุณมีสิทธิ์ได้รับบัตรสกีหรือไม่ตามสถานะการจ้างงานของคุณ ทุกคนจำเป็นต้องทำประกันที่คุ้มครองความรับผิดต่อบุคคลที่สามสำหรับกิจกรรมบนหิมะ</p>
       `,
-      38: `
+      42: `
         <p>สมาชิกทีมทุกคนได้รับส่วนลด 50% ที่ร้านอาหารของเรา สอบถามผู้จัดการของคุณสำหรับรายละเอียดและช่วงเวลาที่ไม่สามารถใช้สิทธิ์ได้</p>
         <ul><li><strong>Goshiki</strong> — ห้าสีสัน หนึ่งความกลมกลืน!</li><li><strong>Zento</strong> — ประเพณีเอเชียผสานความอุดมสมบูรณ์ของฮอกไกโด</li><li><strong>Melt Bar &amp; Grill</strong> — บุฟเฟ่ต์ทานได้ไม่อั้น</li><li><strong>The Flame</strong> — ไฟ อาหาร และไวน์ ดนตรีแจ๊สสดทุกวัน</li><li><strong>Ezo Pub</strong> — เบอร์เกอร์และซูชิทานได้ไม่อั้น</li><li><strong>Sisam</strong> — ร้านอาหารญี่ปุ่น</li></ul>
       `,
@@ -1852,6 +1945,8 @@
       supermarkets:    `Süpermarketler - Kutchan ve Niseko`,
       shuttle:         `Ekip Üyeleri Servis Otobüsü`,
       nikotto:         `Nikotto Otobüsü`,
+      driverLicense:   `Sürücü Belgesi Almak (Gaimen Kirikae)`,
+      driverLicenseScratch: `Sıfırdan Sürücü Belgesi Almak`,
       skipass:         `Kayak Pasaportu Edinme`,
       canteen:         `Utari Kantini`,
       restaurants:     `Restoranlarımızda %50 İndirim`,
@@ -1875,9 +1970,11 @@
         { chapter: true, page: 28, label: `Bölüm 3 – Ulaşım` },
         { page: 30, label: `Servis Otobüsü` },
         { page: 32, label: `Nikotto Otobüsü` },
-        { chapter: true, page: 34, label: `Bölüm 4 – Özel Ayrıcalıklar` },
-        { page: 36, label: `Kayak Pasaportu` },
-        { page: 38, label: `Restoranlarda %50 İndirim` },
+        { page: 34, label: `Sürücü Belgesi Değişimi (Gaimen Kirikae)` },
+        { page: 36, label: `Sıfırdan Sürücü Belgesi` },
+        { chapter: true, page: 38, label: `Bölüm 4 – Özel Ayrıcalıklar` },
+        { page: 40, label: `Kayak Pasaportu` },
+        { page: 42, label: `Restoranlarda %50 İndirim` },
       ],
     },
 
@@ -1977,17 +2074,33 @@
         <p>Çevrimiçi ön rezervasyon da mevcuttur.</p>
         <p><a href="https://nikotto.nisekobus.co.jp/userLoginPageLang" target="_blank" class="info-link">https://nikotto.nisekobus.co.jp/userLoginPageLang</a></p>
       `,
+
       34: `
+        <p>Geçerli bir yabancı sürücü belgeniz varsa, sıfırdan başlamak yerine genellikle onu Japon sürücü belgesine dönüştürebilirsiniz (Gaimen Kirikae). Not: Çalışma vizeniz veya başka bir ikamet statünüz varsa, yalnızca Uluslararası Sürücü Belgesi ile araç kullanamazsınız — dönüşüm zorunludur.</p>
+        <p>Gereklilikler uyruğa göre değişir: bazı ülkeler için yalnızca belge kontrolü ve göz muayenesi yeterliyken, bazıları için yazılı ve uygulamalı sınav da gerekir. Kurallar Ekim 2025'te değişti, bu nedenle başvurudan önce güncel şartları teyit edin.</p>
+        <p><strong>Genellikle şunlara ihtiyacınız olur:</strong></p>
+        <ul><li>Geçerli yabancı sürücü belgesi + resmî Japonca tercüme (JAF)</li><li>Belgeyi aldıktan sonra veren ülkede 3+ ay kaldığınızı gösteren pasaport(lar)</li><li>İkamet Kartı (Residence Card)</li></ul>
+        <p>Başvurular, Niseko'ya yaklaşık 2 saat mesafedeki Sapporo Driver's License Center'da yapılır.</p>
+        <p><a href="https://www.police.pref.hokkaido.lg.jp/guide/menkyo/gai_menkyo-kirikae.html" target="_blank" class="info-link">Hokkaido Polisi — Sürücü Belgesi Değişim Bilgileri</a></p>
+      `,
+
+      36: `
+        <p>Hiç sürücü belgeniz yoksa, ruhsatlı bir sürücü kursuna kaydolup tüm programı tamamlamanız ve ardından Japon vatandaşlarının girdiği sınavların aynısına girmeniz gerekir. Bu yol, mevcut bir belgeyi dönüştürmekten çok daha uzun sürer ve belirgin şekilde daha pahalıdır — birkaç hafta ve ciddi bir bütçe planlayın.</p>
+        <p>Bu kurslardaki dersler yalnızca Japonca yapılır; bu nedenle kayıt sırasında ve derslerde Japonca bilen bir çalışma arkadaşınızdan destek almanız gerekecektir.</p>
+        <p><strong>Yakındaki sürücü kursları:</strong></p>
+        <ul><li><a href="http://kutchan-ds.o.oo7.jp/" target="_blank" class="link-name">Kutchan Driving School (倶知安自動車学校)</a> — Hirafu, Kutchan<br>T. 0136-22-1573</li><li><a href="https://www.keishin-g.com/yoichi/" target="_blank" class="link-name">Yoichi Driving School (余市自動車学校)</a> — Yoichi, ~45 km<br>T. 0135-22-3393</li><li><a href="https://www.hokkaidochuo.co.jp/otaru" target="_blank" class="link-name">Otaru Chuo Driving School (小樽中央自動車学校)</a> — Otaru, ~55 km<br>T. 0134-26-3515</li></ul>
+      `,
+      38: `
         <p>Utari Kantini her gün sabah 7'den akşam 7'ye kadar açık olup, 4 günlük menü, taze salata köşesi ve fırın köşesi sunmaktadır. Çalışma günlerinde iki yemek fişi kullanılabilir.</p>
         <p>Yılda bir kez en sevdiğimiz yemek için oy veriyoruz ve o yemek menüye ekleniyor; ayrıca her gün yeni tatlarla Häagen-Dazs dondurmamız da var (1 yemek fişi gereklidir). Yemek fişini almak için, giriş tarayıcısına kimlik kartınızı okutmanız yeterlidir.</p>
         <p>Utari kantini, molanız sırasında dinlenip ekip arkadaşlarınızla hikayeler paylaşabileceğiniz bir yerdir. Lütfen yemeklerin görev saatleri içinde alınması gerektiğini unutmayın.</p>
       `,
-      36: `
+      40: `
         <p>Burada çalışmanın en iyi ayrıcalıklarından biri de dağın kendisidir. İnsan Kaynakları Ekibi bu günlük dağ geçiş kartlarını sağlar. Bu, kapımızın hemen dışındaki dünyaca ünlü pudra karına giden biletinizdir.</p>
         <div class="alert-box">Bu geçiş kartı size özeldir ve kesinlikle başka hiç kimseyle paylaşılamaz.</div>
         <p>Lütfen istihdam durumunuza göre kayak geçiş kartına hak kazanıp kazanmadığınızı İnsan Kaynakları Ekibi ile kontrol edin. Kar aktivitelerinde üçüncü şahıslara karşı sorumluluğu kapsayan sigortayı almak herkes için zorunludur.</p>
       `,
-      38: `
+      42: `
         <p>Tüm Ekip Üyeleri restoranlarımızda %50 indirim kazanır. Ayrıntılar ve indirim uygulanmayan dönemler için yöneticinize sorun.</p>
         <ul><li><strong>Goshiki</strong> — Beş Renk, Tek Uyum!</li><li><strong>Zento</strong> — Hokkaido'nun bereketiyle Asya gelenekleri.</li><li><strong>Melt Bar &amp; Grill</strong> — Açık Büfe, Doyana Kadar Yiyin.</li><li><strong>The Flame</strong> — Ateş, Yemekler ve Şaraplar. Her Gün Canlı Caz.</li><li><strong>Ezo Pub</strong> — Doyana Kadar Burger ve Suşi.</li><li><strong>Sisam</strong> — Japon Restoranı.</li></ul>
       `,
@@ -2038,6 +2151,8 @@
       supermarkets:    `슈퍼마켓 - 굿찬 & 니세코`,
       shuttle:         `팀원 셔틀버스`,
       nikotto:         `니코토 버스`,
+      driverLicense:   `운전면허 취득 (외국면허 전환, Gaimen Kirikae)`,
+      driverLicenseScratch: `처음부터 운전면허 취득하기`,
       skipass:         `스키 패스 취득`,
       canteen:         `우타리 구내식당`,
       restaurants:     `레스토랑 50% 할인`,
@@ -2061,9 +2176,11 @@
         { chapter: true, page: 28, label: `제3장 – 교통수단` },
         { page: 30, label: `셔틀버스` },
         { page: 32, label: `니코토 버스` },
-        { chapter: true, page: 34, label: `제4장 – 특별 혜택` },
-        { page: 36, label: `스키 패스 취득` },
-        { page: 38, label: `레스토랑 50% 할인` },
+        { page: 34, label: `운전면허 전환 (Gaimen Kirikae)` },
+        { page: 36, label: `처음부터 운전면허 취득하기` },
+        { chapter: true, page: 38, label: `제4장 – 특별 혜택` },
+        { page: 40, label: `스키 패스 취득` },
+        { page: 42, label: `레스토랑 50% 할인` },
       ],
     },
 
@@ -2163,17 +2280,33 @@
         <p>온라인 사전 예약도 가능합니다.</p>
         <p><a href="https://nikotto.nisekobus.co.jp/userLoginPageLang" target="_blank" class="info-link">https://nikotto.nisekobus.co.jp/userLoginPageLang</a></p>
       `,
+
       34: `
+        <p>유효한 외국 운전면허증을 소지하고 있다면, 처음부터 새로 취득하는 대신 일본 면허증으로 전환할 수 있습니다(외국면허 전환, Gaimen Kirikae). 참고: 취업 비자나 기타 체류 자격을 보유한 경우 국제운전면허증만으로는 운전할 수 없으며, 반드시 전환해야 합니다.</p>
+        <p>요건은 국적에 따라 다릅니다. 일부 국가는 서류 확인과 시력 검사만 받으면 되지만, 학과 시험과 실기 시험까지 요구되는 국가도 있습니다. 2025년 10월에 제도가 변경되었으므로 신청 전에 최신 요건을 확인해 주세요.</p>
+        <p><strong>일반적으로 필요한 서류:</strong></p>
+        <ul><li>유효한 외국 운전면허증 + 공식 일본어 번역문(JAF)</li><li>면허 취득 후 발급 국가에 3개월 이상 체류한 사실을 확인할 수 있는 여권(복수 가능)</li><li>재류 카드</li></ul>
+        <p>신청은 니세코에서 약 2시간 거리의 Sapporo Driver's License Center에서 접수합니다.</p>
+        <p><a href="https://www.police.pref.hokkaido.lg.jp/guide/menkyo/gai_menkyo-kirikae.html" target="_blank" class="info-link">홋카이도 경찰 — 외국면허 전환 안내</a></p>
+      `,
+
+      36: `
+        <p>운전면허가 전혀 없는 경우에는 공인 운전학원에 등록해 전 과정을 이수한 뒤, 일본 국민과 동일한 시험에 응시해야 합니다. 이 경로는 기존 면허를 전환하는 것보다 훨씬 오래 걸리고 비용도 상당히 높습니다 — 수 주간의 기간과 적지 않은 비용을 예상해 주세요.</p>
+        <p>이들 학원의 수업은 일본어로만 진행되므로, 등록 절차와 수업을 따라가려면 일본어가 가능한 동료의 도움이 필요할 것입니다.</p>
+        <p><strong>인근 운전학원:</strong></p>
+        <ul><li><a href="http://kutchan-ds.o.oo7.jp/" target="_blank" class="link-name">Kutchan Driving School (倶知安自動車学校)</a> — 히라후, 굿찬<br>T. 0136-22-1573</li><li><a href="https://www.keishin-g.com/yoichi/" target="_blank" class="link-name">Yoichi Driving School (余市自動車学校)</a> — 요이치, 약 45 km<br>T. 0135-22-3393</li><li><a href="https://www.hokkaidochuo.co.jp/otaru" target="_blank" class="link-name">Otaru Chuo Driving School (小樽中央自動車学校)</a> — 오타루, 약 55 km<br>T. 0134-26-3515</li></ul>
+      `,
+      38: `
         <p>우타리 식당은 매일 오전 7시부터 오후 7시까지 운영되며, 매일 4가지 메뉴와 신선한 샐러드 코너, 베이커리 코너를 제공합니다. 근무일에는 식사 티켓 2장을 사용하실 수 있습니다.</p>
         <p>연 1회, 가장 좋아하는 메뉴에 투표하며 그 메뉴가 정식 메뉴에 추가됩니다. 또한 매일 새로운 맛의 하겐다즈 아이스크림도 제공됩니다(식사 티켓 1장 필요). 식사 티켓을 받으려면 입구의 스캐너에 ID 카드를 태그하기만 하면 됩니다.</p>
         <p>우타리 식당은 휴식 시간 동안 동료들과 함께 쉬며 이야기를 나눌 수 있는 공간입니다. 식사는 반드시 근무 시간 내에 이루어져야 함을 유념해주세요.</p>
       `,
-      36: `
+      40: `
         <p>이곳에서 일하는 가장 큰 특전 중 하나는 바로 이 산 자체입니다. 인사팀에서 매일 이용 가능한 마운틴 패스를 제공해드립니다. 이는 바로 문밖에 펼쳐진 세계적으로 유명한 파우더 스노우로 향하는 여러분의 티켓입니다.</p>
         <div class="alert-box">이 패스는 본인 전용이며 다른 누구와도 공유해서는 절대 안 됩니다.</div>
         <p>고용 형태에 따라 스키 패스 자격이 있는지 인사팀에 확인해주세요. 눈 위 활동 중 제3자 배상책임을 보장하는 보험 가입은 전원 필수입니다.</p>
       `,
-      38: `
+      42: `
         <p>모든 팀 구성원은 저희 레스토랑에서 50% 할인을 받으실 수 있습니다. 자세한 사항과 이용 불가 기간은 매니저에게 문의해주세요.</p>
         <ul><li><strong>Goshiki</strong> — 다섯 가지 색깔, 하나의 조화!</li><li><strong>Zento</strong> — 홋카이도의 풍요로움을 담은 아시아 전통 요리.</li><li><strong>Melt Bar &amp; Grill</strong> — 무제한 뷔페.</li><li><strong>The Flame</strong> — 불, 음식 그리고 와인. 매일 라이브 재즈 공연.</li><li><strong>Ezo Pub</strong> — 버거와 스시 무제한.</li><li><strong>Sisam</strong> — 일본 레스토랑.</li></ul>
       `,
@@ -2224,6 +2357,8 @@
       supermarkets:    `超市 - 俱知安 & 二世古`,
       shuttle:         `员工班车`,
       nikotto:         `Nikotto巴士`,
+      driverLicense:   `考取日本驾照（外国驾照转换 Gaimen Kirikae）`,
+      driverLicenseScratch: `从零开始考取日本驾照`,
       skipass:         `办理滑雪通行证`,
       canteen:         `Utari员工餐厅`,
       restaurants:     `餐厅五折优惠`,
@@ -2247,9 +2382,11 @@
         { chapter: true, page: 28, label: `第三章 – 交通` },
         { page: 30, label: `员工班车与机场巴士` },
         { page: 32, label: `Nikotto巴士` },
-        { chapter: true, page: 34, label: `第四章 – 特别福利` },
-        { page: 36, label: `办理滑雪通行证` },
-        { page: 38, label: `餐厅五折优惠` },
+        { page: 34, label: `驾照转换（Gaimen Kirikae）` },
+        { page: 36, label: `从零开始考取驾照` },
+        { chapter: true, page: 38, label: `第四章 – 特别福利` },
+        { page: 40, label: `办理滑雪通行证` },
+        { page: 42, label: `餐厅五折优惠` },
       ],
     },
 
@@ -2349,17 +2486,33 @@
         <p>也可以在线提前预订。</p>
         <p><a href="https://nikotto.nisekobus.co.jp/userLoginPageLang" target="_blank" class="info-link">https://nikotto.nisekobus.co.jp/userLoginPageLang</a></p>
       `,
+
       34: `
+        <p>如果您持有有效的外国驾照，通常可以将其转换为日本驾照（外国驾照转换 Gaimen Kirikae），而无需从零开始。请注意：如果您持有工作签证或其他在留资格，则不能仅凭国际驾照驾车，必须办理转换。</p>
+        <p>所需条件因国籍而异：部分国家只需文件审核和视力检查，另一些国家还需要参加笔试和路考。相关规定已于 2025 年 10 月修改，请在申请前确认最新要求。</p>
+        <p><strong>通常需要准备：</strong></p>
+        <ul><li>有效的外国驾照 + 日文正式翻译件（JAF）</li><li>能证明取得驾照后在签发国累计停留 3 个月以上的护照（可多本）</li><li>在留卡</li></ul>
+        <p>申请在距离二世谷约 2 小时车程的 Sapporo Driver's License Center 办理。</p>
+        <p><a href="https://www.police.pref.hokkaido.lg.jp/guide/menkyo/gai_menkyo-kirikae.html" target="_blank" class="info-link">北海道警察 — 外国驾照转换指南</a></p>
+      `,
+
+      36: `
+        <p>如果您完全没有驾照，就需要报名指定驾校并修完全部课程，然后参加与日本公民相同的考试。这条路径比转换现有驾照耗时长得多、费用也高出许多——请预留数周时间和一笔可观的费用。</p>
+        <p>这些驾校的课程仅以日语授课，因此在报名和上课时，您很可能需要会日语的同事协助。</p>
+        <p><strong>附近的驾校：</strong></p>
+        <ul><li><a href="http://kutchan-ds.o.oo7.jp/" target="_blank" class="link-name">Kutchan Driving School (倶知安自動車学校)</a> — 比罗夫，俱知安<br>T. 0136-22-1573</li><li><a href="https://www.keishin-g.com/yoichi/" target="_blank" class="link-name">Yoichi Driving School (余市自動車学校)</a> — <br>余市，约 45 公里<br>T. 0135-22-3393</li><li><a href="https://www.hokkaidochuo.co.jp/otaru" target="_blank" class="link-name">Otaru Chuo Driving School (小樽中央自動車学校)</a> — 小樽，约 55 公里<br>T. 0134-26-3515</li></ul>
+      `,
+      38: `
         <p>Utari食堂每日上午7点至晚上7点营业，提供4种每日菜单、新鲜沙拉区以及烘焙区。工作日期间，我们提供两张餐券。</p>
         <p>每年一次，我们会投票选出最喜爱的菜品，该菜品将被加入菜单；此外，我们每天还提供哈根达斯冰淇淋，口味不断更新（需使用1张餐券）。领取餐券只需在入口处的扫描仪上刷一下您的员工卡即可。</p>
         <p>Utari食堂是您在休息时间与同事一起放松、分享故事的地方。请注意，用餐必须在值班时间内完成。</p>
       `,
-      36: `
+      40: `
         <p>在这里工作最好的福利之一，就是这座山本身。人力资源团队会提供这些每日通行的山地通行证。这是您通往家门口那举世闻名的粉雪的入场券。</p>
         <div class="alert-box">该通行证仅供本人使用，严禁与他人共享。</div>
         <p>请与人力资源团队核实，根据您的雇佣状态确认您是否具备滑雪通行证的申领资格。所有人都必须购买涵盖雪上活动第三方责任的保险，这是强制性要求。</p>
       `,
-      38: `
+      42: `
         <p>所有团队成员在我们的餐厅均可享受5折优惠。详情及不适用时段请向您的经理咨询。</p>
         <ul><li><strong>Goshiki</strong> — 五种色彩，一份和谐！</li><li><strong>Zento</strong> — 融合北海道丰饶物产的亚洲传统美食。</li><li><strong>Melt Bar &amp; Grill</strong> — 自助畅吃餐厅。</li><li><strong>The Flame</strong> — 火焰、美食与美酒。每日现场爵士乐演出。</li><li><strong>Ezo Pub</strong> — 汉堡与寿司无限畅吃。</li><li><strong>Sisam</strong> — 日式料理餐厅。</li></ul>
       `,
@@ -2410,6 +2563,8 @@
       supermarkets:    `सुपरमार्केटहरू - कुत्चान र निसेको`,
       shuttle:         `टिम सदस्य शटल बस`,
       nikotto:         `निकोट्टो बस`,
+      driverLicense:   `ड्राइभिङ लाइसेन्स प्राप्त गर्ने (Gaimen Kirikae)`,
+      driverLicenseScratch: `सुरुदेखि ड्राइभिङ लाइसेन्स लिने`,
       skipass:         `स्की पास`,
       canteen:         `उटारी क्यान्टिन`,
       restaurants:     `रेस्टुरेन्टमा ५०% छुट`,
@@ -2433,9 +2588,11 @@
         { chapter: true, page: 28, label: `अध्याय ३ – यातायात` },
         { page: 30, label: `शटल बस` },
         { page: 32, label: `निकोट्टो बस` },
-        { chapter: true, page: 34, label: `अध्याय ४ – विशेष सुविधाहरू` },
-        { page: 36, label: `स्की पास` },
-        { page: 38, label: `रेस्टुरेन्टमा ५०% छुट` },
+        { page: 34, label: `ड्राइभिङ लाइसेन्स रूपान्तरण (Gaimen Kirikae)` },
+        { page: 36, label: `सुरुदेखि ड्राइभिङ लाइसेन्स` },
+        { chapter: true, page: 38, label: `अध्याय ४ – विशेष सुविधाहरू` },
+        { page: 40, label: `स्की पास` },
+        { page: 42, label: `रेस्टुरेन्टमा ५०% छुट` },
       ],
     },
 
@@ -2535,17 +2692,33 @@
         <p>अनलाइन अग्रिम बुकिङ पनि उपलब्ध छ।</p>
         <p><a href="https://nikotto.nisekobus.co.jp/userLoginPageLang" target="_blank" class="info-link">https://nikotto.nisekobus.co.jp/userLoginPageLang</a></p>
       `,
+
       34: `
+        <p>यदि तपाईंसँग मान्य विदेशी ड्राइभिङ लाइसेन्स छ भने, सुरुदेखि सुरु गर्नुको सट्टा सामान्यतया त्यसलाई जापानी लाइसेन्समा रूपान्तरण गर्न सकिन्छ (Gaimen Kirikae)। ध्यान दिनुहोस्: वर्क भिसा वा अन्य निवास स्थिति भएका व्यक्तिले अन्तर्राष्ट्रिय ड्राइभिङ परमिटको भरमा मात्र गाडी चलाउन पाउँदैनन् — रूपान्तरण अनिवार्य छ।</p>
+        <p>आवश्यकताहरू राष्ट्रियताअनुसार फरक हुन्छन्: केही देशका लागि कागजात जाँच र आँखा परीक्षण मात्र चाहिन्छ भने, केहीका लागि लिखित र प्रयोगात्मक परीक्षा पनि आवश्यक हुन्छ। नियमहरू अक्टोबर २०२५ मा परिवर्तन भएका छन्, त्यसैले आवेदन दिनुअघि हालका आवश्यकताहरू पक्का गर्नुहोस्।</p>
+        <p><strong>सामान्यतया चाहिने कागजातहरू:</strong></p>
+        <ul><li>मान्य विदेशी लाइसेन्स + आधिकारिक जापानी अनुवाद (JAF)</li><li>लाइसेन्स लिएपछि जारी गर्ने देशमा ३+ महिना बसेको देखाउने राहदानी(हरू)</li><li>रेजिडेन्स कार्ड</li></ul>
+        <p>आवेदनहरू निसेकोबाट करिब २ घण्टा टाढा रहेको Sapporo Driver's License Center मा लिइन्छ।</p>
+        <p><a href="https://www.police.pref.hokkaido.lg.jp/guide/menkyo/gai_menkyo-kirikae.html" target="_blank" class="info-link">होक्काइदो प्रहरी — लाइसेन्स रूपान्तरण जानकारी</a></p>
+      `,
+
+      36: `
+        <p>यदि तपाईंसँग कुनै पनि ड्राइभिङ लाइसेन्स छैन भने, इजाजतप्राप्त ड्राइभिङ स्कुलमा भर्ना भई पूरा पाठ्यक्रम सक्नुपर्छ र त्यसपछि जापानी नागरिकले दिने उही परीक्षाहरू दिनुपर्छ। यो बाटो पहिलेको लाइसेन्स रूपान्तरण गर्नुभन्दा धेरै लामो र निकै महँगो हुन्छ — धेरै हप्ता र राम्रै खर्चको तयारी गर्नुहोस्।</p>
+        <p>यी स्कुलहरूमा कक्षाहरू जापानी भाषामा मात्र सञ्चालन हुन्छन्, त्यसैले भर्ना हुन र पाठ्यक्रम बुझ्न जापानी बोल्ने सहकर्मीको सहयोग चाहिन सक्छ।</p>
+        <p><strong>नजिकैका ड्राइभिङ स्कुलहरू:</strong></p>
+        <ul><li><a href="http://kutchan-ds.o.oo7.jp/" target="_blank" class="link-name">Kutchan Driving School (倶知安自動車学校)</a> — हिराफु, कुचान<br>T. 0136-22-1573</li><li><a href="https://www.keishin-g.com/yoichi/" target="_blank" class="link-name">Yoichi Driving School (余市自動車学校)</a> — योइची, <br>~४५ किमी<br>T. 0135-22-3393</li><li><a href="https://www.hokkaidochuo.co.jp/otaru" target="_blank" class="link-name">Otaru Chuo Driving School (小樽中央自動車学校)</a> — ओटारु, ~५५ किमी<br>T. 0134-26-3515</li></ul>
+      `,
+      38: `
         <p>उटारी क्यान्टिन दैनिक बिहान ७ बजेदेखि साँझ ७ बजेसम्म खुल्छ, ४ वटा दैनिक मेनु, ताजा सलाद कुनासहित र बेकरी कुनासहित। कार्य दिनहरूमा हामीसँग दुई खाना टिकट उपलब्ध हुन्छन्।</p>
         <p>वर्षमा एकपटक, हामी आफ्नो मनपर्ने परिकारका लागि मत दिन्छौं र त्यो मेनुमा थपिनेछ, साथै हामीसँग हरेक दिन नयाँ स्वादसहित Häagen-Dazs आइसक्रिम पनि हुन्छ (१ खाना टिकट आवश्यक)। खाना टिकट प्राप्त गर्न, प्रवेशद्वारको स्क्यानरमा आफ्नो ID कार्ड ट्याप गर्नुहोस्।</p>
         <p>उटारी क्यान्टिन तपाईंको विश्रामको समयमा आफ्ना सहकर्मीहरूसँग आराम गर्ने र कथाहरू बाँड्ने ठाउँ हो। कृपया ध्यान दिनुहोस् कि खाना ड्युटी घण्टाभित्रै लिनुपर्छ।</p>
       `,
-      36: `
+      40: `
         <p>यहाँ काम गर्नुको सबैभन्दा राम्रो सुविधाहरू मध्ये एक भनेको पहाड आफैं हो। मानव संसाधन (HR) टिमले यी दैनिक पर्वत पासहरू प्रदान गर्दछ। यो हाम्रो ढोकाबाहिरै रहेको विश्वप्रसिद्ध पाउडर हिउँको तपाईंको टिकट हो।</p>
         <div class="alert-box">यो पास तपाईंको व्यक्तिगत हो र यसलाई अरू कसैसँग साझा गर्न कडाइका साथ निषेध गरिएको छ।</div>
         <p>कृपया आफ्नो रोजगारी स्थितिको आधारमा तपाईं स्की पासका लागि योग्य हुनुहुन्छ कि हुनुहुन्न भनी HR टिमसँग जाँच गर्नुहोस्। हिउँ गतिविधिहरूका लागि तेस्रो-पक्ष दायित्व कभर गर्ने बीमा प्राप्त गर्नु सबैका लागि अनिवार्य छ।</p>
       `,
-      38: `
+      42: `
         <p>सबै टिम सदस्यहरूले हाम्रा रेस्टुरेन्टहरूमा ५०% छुट पाउँछन्। विवरण र लागू नहुने अवधिका लागि आफ्नो व्यवस्थापकसँग सोध्नुहोस्।</p>
         <ul><li><strong>Goshiki</strong> — पाँच रङ, एक सामञ्जस्य!</li><li><strong>Zento</strong> — होक्काइडोको प्रचुरतासहित एसियाली परम्पराहरू।</li><li><strong>Melt Bar &amp; Grill</strong> — जति खाए पनि हुने बुफे।</li><li><strong>The Flame</strong> — आगो, खाना र वाइन। दैनिक लाइभ ज्याज।</li><li><strong>Ezo Pub</strong> — बर्गर र सुशी जति खाए पनि हुने।</li><li><strong>Sisam</strong> — जापानी रेस्टुरेन्ट।</li></ul>
       `,
@@ -2596,6 +2769,8 @@
       supermarkets:    `စျေးဆိုင်ကြီးများ - Kutchan & Niseko`,
       shuttle:         `အဖွဲ့ဝင် ရှတ်တယ်ဘတ်စ်ကား`,
       nikotto:         `Nikotto ဘတ်စ်ကား`,
+      driverLicense:   `ယာဉ်မောင်းလိုင်စင် ရယူခြင်း (Gaimen Kirikae)`,
+      driverLicenseScratch: `အစမှစ၍ ယာဉ်မောင်းလိုင်စင် ရယူခြင်း`,
       skipass:         `Ski Pass ရယူခြင်း`,
       canteen:         `Utari စားသောက်ဆိုင်`,
       restaurants:     `စားသောက်ဆိုင် ၅၀% လျှော့`,
@@ -2619,9 +2794,11 @@
         { chapter: true, page: 28, label: `အခန်း ၃ – သယ်ယူပို့ဆောင်ရေး` },
         { page: 30, label: `ရှတ်တယ်ဘတ်စ်` },
         { page: 32, label: `Nikotto ဘတ်စ်` },
-        { chapter: true, page: 34, label: `အခန်း ၄ – အထူးအကျိုးခံစားခွင့်` },
-        { page: 36, label: `Ski Pass` },
-        { page: 38, label: `စားသောက်ဆိုင် ၅၀% လျှော့` },
+        { page: 34, label: `ယာဉ်မောင်းလိုင်စင် ပြောင်းလဲခြင်း (Gaimen Kirikae)` },
+        { page: 36, label: `အစမှစ၍ ယာဉ်မောင်းလိုင်စင်` },
+        { chapter: true, page: 38, label: `အခန်း ၄ – အထူးအကျိုးခံစားခွင့်` },
+        { page: 40, label: `Ski Pass` },
+        { page: 42, label: `စားသောက်ဆိုင် ၅၀% လျှော့` },
       ],
     },
 
@@ -2721,17 +2898,33 @@
         <p>အွန်လိုင်းမှ ကြိုတင်မှာယူခြင်းကိုလည်း ရနိုင်ပါသည်။</p>
         <p><a href="https://nikotto.nisekobus.co.jp/userLoginPageLang" target="_blank" class="info-link">https://nikotto.nisekobus.co.jp/userLoginPageLang</a></p>
       `,
+
       34: `
+        <p>သက်တမ်းရှိသော နိုင်ငံခြားယာဉ်မောင်းလိုင်စင် ရှိပါက အစမှပြန်စရမည့်အစား ဂျပန်လိုင်စင်အဖြစ် ပြောင်းလဲယူနိုင်ပါသည် (Gaimen Kirikae)။ သတိပြုရန်: အလုပ်ဗီဇာ သို့မဟုတ် အခြားနေထိုင်ခွင့်ရှိသူများသည် နိုင်ငံတကာယာဉ်မောင်းခွင့်လက်မှတ်တစ်ခုတည်းဖြင့် ကားမောင်းခွင့်မရှိပါ — ပြောင်းလဲယူရန် လိုအပ်ပါသည်။</p>
+        <p>လိုအပ်ချက်များသည် နိုင်ငံသားအလိုက် ကွဲပြားပါသည်။ အချို့နိုင်ငံများအတွက် စာရွက်စာတမ်းစစ်ဆေးမှုနှင့် မျက်စိစစ်ဆေးမှုသာ လိုအပ်ပြီး၊ အချို့အတွက် စာဖြေနှင့် လက်တွေ့စာမေးပွဲပါ ဖြေဆိုရပါသည်။ စည်းမျဉ်းများကို ၂၀၂၅ ခုနှစ် အောက်တိုဘာလတွင် ပြင်ဆင်ခဲ့သဖြင့် လျှောက်ထားခြင်းမပြုမီ လက်ရှိလိုအပ်ချက်များကို အတည်ပြုပါ။</p>
+        <p><strong>ယေဘုယျအားဖြင့် လိုအပ်သည်များ:</strong></p>
+        <ul><li>သက်တမ်းရှိ နိုင်ငံခြားလိုင်စင် + တရားဝင် ဂျပန်ဘာသာပြန် (JAF)</li><li>လိုင်စင်ရပြီးနောက် ထုတ်ပေးသည့်နိုင်ငံတွင် ၃ လနှင့်အထက် နေထိုင်ခဲ့ကြောင်း ပြသည့် နိုင်ငံကူးလက်မှတ်(များ)</li><li>နေထိုင်ခွင့်ကတ် (Residence Card)</li></ul>
+        <p>လျှောက်လွှာများကို နီဆကိုမှ ၂ နာရီခန့်ဝေးသော Sapporo Driver's License Center တွင် ဆောင်ရွက်ပေးပါသည်။</p>
+        <p><a href="https://www.police.pref.hokkaido.lg.jp/guide/menkyo/gai_menkyo-kirikae.html" target="_blank" class="info-link">ဟော့ကိုင်းဒိုးရဲတပ်ဖွဲ့ — လိုင်စင်ပြောင်းလဲရေး အချက်အလက်</a></p>
+      `,
+
+      36: `
+        <p>ယာဉ်မောင်းလိုင်စင် လုံးဝမရှိပါက၊ လိုင်စင်ရ ယာဉ်မောင်းသင်တန်းကျောင်းတွင် တက်ရောက်၍ သင်တန်းအပြည့်အစုံ ပြီးမြောက်ပြီးနောက် ဂျပန်နိုင်ငံသားများဖြေဆိုသည့် စာမေးပွဲများကိုပင် ဖြေဆိုရမည်ဖြစ်သည်။ ဤနည်းလမ်းသည် ရှိပြီးသားလိုင်စင်ကို ပြောင်းလဲယူခြင်းထက် အချိန်များစွာပိုကြာပြီး ကုန်ကျစရိတ်လည်း သိသိသာသာပိုမြင့်သည် — ရက်သတ္တပတ်များစွာနှင့် ကုန်ကျစရိတ်များစွာကို ကြိုတင်စီစဉ်ထားပါ။</p>
+        <p>ဤကျောင်းများ၏ သင်ကြားမှုများသည် ဂျပန်ဘာသာဖြင့်သာ ဖြစ်သဖြင့်၊ စာရင်းသွင်းရာတွင်နှင့် သင်တန်းလိုက်ရာတွင် ဂျပန်စကားပြောတတ်သော လုပ်ဖော်ကိုင်ဖက်၏ အကူအညီ လိုအပ်ပါလိမ့်မည်။</p>
+        <p><strong>အနီးအနားရှိ ယာဉ်မောင်းသင်တန်းကျောင်းများ:</strong></p>
+        <ul><li><a href="http://kutchan-ds.o.oo7.jp/" target="_blank" class="link-name">Kutchan Driving School (倶知安自動車学校)</a> — ဟိရာဖု၊ ကုချန်<br>T. 0136-22-1573</li><li><a href="https://www.keishin-g.com/yoichi/" target="_blank" class="link-name">Yoichi Driving School (余市自動車学校)</a> — ယိုအိချိ၊ ~၄၅ ကီလိုမီတာ<br>T. 0135-22-3393</li><li><a href="https://www.hokkaidochuo.co.jp/otaru" target="_blank" class="link-name">Otaru Chuo Driving School (小樽中央自動車学校)</a> — အိုတာရု၊ ~၅၅ ကီလိုမီတာ<br>T. 0134-26-3515</li></ul>
+      `,
+      38: `
         <p>Utari Canteen သည် နေ့စဉ် နံနက် 7 နာရီမှ ညနေ 7 နာရီအထိ နေ့စဉ် မီနူး 4 မျိုး၊ လတ်ဆတ်သော သုပ်ဆိုင်နှင့် မုန့်ဖုတ်ဆိုင်ဖြင့် ဖွင့်ထားသည်။ အလုပ်လုပ်ရသောနေ့များတွင် ကျွန်ုပ်တို့တွင် အစားအသောက်လက်မှတ် နှစ်စောင် ရရှိနိုင်သည်။</p>
         <p>တစ်နှစ်လျှင် တစ်ကြိမ်၊ ကျွန်ုပ်တို့ အနှစ်သက်ဆုံး ဟင်းလျာကို မဲပေးကြပြီး ၎င်းကို မီနူးထဲသို့ ထည့်သွင်းမည်ဖြစ်ပြီး၊ ထို့အပြင် ကျွန်ုပ်တို့တွင် နေ့စဉ် အရသာအသစ်များပါသော Häagen-Dazs ရေခဲမုန့် ရှိပါသည် (အစားအသောက်လက်မှတ် 1 စောင် လိုအပ်သည်)။ အစားအသောက်လက်မှတ် ရယူရန် ဝင်ပေါက်ရှိ စကင်နာတွင် သင်၏ ID ကတ်ကို တို့ရုံသာ ဖြစ်သည်။</p>
         <p>Utari canteen သည် အနားယူချိန်အတွင်း သင့်အဖွဲ့ဝင်များနှင့်အတူ အနားယူပြီး ဇာတ်လမ်းများ မျှဝေရာနေရာ ဖြစ်သည်။ အစားအစာများကို တာဝန်ချိန်အတွင်း သာ စားသုံးရမည်ကို ကျေးဇူးပြု၍ သတိပြုပါ။</p>
       `,
-      36: `
+      40: `
         <p>ဤနေရာတွင် အလုပ်လုပ်ခြင်း၏ အကောင်းဆုံးအကျိုးခံစားခွင့်များထဲမှ တစ်ခုမှာ တောင်ကိုယ်တိုင်ပင် ဖြစ်သည်။ HR အဖွဲ့သည် ဤနေ့စဉ်တောင်ခွင့်ပြုလက်မှတ်များကို ပေးဆောင်ပါသည်။ ၎င်းသည် ကျွန်ုပ်တို့၏ တံခါးဝအပြင်ဘက်ရှိ ကမ္ဘာကျော်နှင်းမှုန်သို့ သင်၏ လက်မှတ်ဖြစ်သည်။</p>
         <div class="alert-box">ဤလက်မှတ်သည် သင့်ကိုယ်ပိုင်ဖြစ်ပြီး အခြားမည်သူ့ကိုမျှ မျှဝေခြင်းကို တင်းကျပ်စွာ တားမြစ်ထားသည်။</div>
         <p>သင်၏ အလုပ်အကိုင်အခြေအနေအပေါ် မူတည်၍ ski pass အတွက် အရည်အချင်းပြည့်မီမမီကို ကျေးဇူးပြု၍ HR အဖွဲ့နှင့် စစ်ဆေးပါ။ နှင်းဆိုင်ရာ လှုပ်ရှားမှုများအတွက် တတိယအဖွဲ့ တာဝန်ခံမှုကို ကာကွယ်ပေးသည့် အာမခံ ရယူရန် လူတိုင်းအတွက် မဖြစ်မနေ လိုအပ်ပါသည်။</p>
       `,
-      38: `
+      42: `
         <p>အဖွဲ့ဝင်အားလုံးသည် ကျွန်ုပ်တို့၏ စားသောက်ဆိုင်များတွင် 50% လျှော့စျေး ရရှိကြသည်။ အသေးစိတ်နှင့် ကန့်သတ်ကာလများအတွက် သင်၏ မန်နေဂျာကို မေးမြန်းပါ။</p>
         <ul><li><strong>Goshiki</strong> — အရောင်ငါးမျိုး၊ ညီညွတ်မှုတစ်ခု!</li><li><strong>Zento</strong> — Hokkaido ၏ ပေါကြွယ်ဝမှုနှင့်အတူ အာရှရိုးရာများ။</li><li><strong>Melt Bar &amp; Grill</strong> — စိတ်တိုင်းကျစားနိုင်သော Buffet။</li><li><strong>The Flame</strong> — မီး၊ အစားအစာနှင့် ဝိုင်။ နေ့စဉ် တိုက်ရိုက် Jazz တီးလုံး။</li><li><strong>Ezo Pub</strong> — Burger နှင့် Sushi စိတ်တိုင်းကျစားနိုင်သည်။</li><li><strong>Sisam</strong> — ဂျပန်စားသောက်ဆိုင်။</li></ul>
       `,
@@ -2782,6 +2975,8 @@
       supermarkets:    `Siêu thị - Kutchan & Niseko`,
       shuttle:         `Xe đưa đón nhân viên`,
       nikotto:         `Xe buýt Nikotto`,
+      driverLicense:   `Lấy bằng lái xe (Gaimen Kirikae)`,
+      driverLicenseScratch: `Lấy bằng lái xe từ đầu`,
       skipass:         `Lấy thẻ trượt tuyết`,
       canteen:         `Căng-tin Utari`,
       restaurants:     `Giảm 50% tại nhà hàng`,
@@ -2805,9 +3000,11 @@
         { chapter: true, page: 28, label: `Chương 3 – Giao thông` },
         { page: 30, label: `Xe đưa đón` },
         { page: 32, label: `Xe buýt Nikotto` },
-        { chapter: true, page: 34, label: `Chương 4 – Phúc lợi đặc biệt` },
-        { page: 36, label: `Thẻ trượt tuyết` },
-        { page: 38, label: `Giảm 50% nhà hàng` },
+        { page: 34, label: `Chuyển đổi bằng lái xe (Gaimen Kirikae)` },
+        { page: 36, label: `Lấy bằng lái xe từ đầu` },
+        { chapter: true, page: 38, label: `Chương 4 – Phúc lợi đặc biệt` },
+        { page: 40, label: `Thẻ trượt tuyết` },
+        { page: 42, label: `Giảm 50% nhà hàng` },
       ],
     },
 
@@ -2907,17 +3104,33 @@
         <p>Cũng có thể đặt trước trực tuyến.</p>
         <p><a href="https://nikotto.nisekobus.co.jp/userLoginPageLang" target="_blank" class="info-link">https://nikotto.nisekobus.co.jp/userLoginPageLang</a></p>
       `,
+
       34: `
+        <p>Nếu bạn có bằng lái xe nước ngoài còn hiệu lực, thông thường bạn có thể chuyển đổi sang bằng lái Nhật Bản (Gaimen Kirikae) thay vì phải học lại từ đầu. Lưu ý: nếu bạn có visa lao động hoặc tư cách lưu trú khác, bạn không được lái xe chỉ với Giấy phép lái xe quốc tế — bắt buộc phải chuyển đổi.</p>
+        <p>Yêu cầu khác nhau tùy quốc tịch: một số nước chỉ cần kiểm tra giấy tờ và kiểm tra thị lực, một số nước còn phải thi lý thuyết và thực hành. Quy định đã thay đổi vào tháng 10 năm 2025, vì vậy hãy xác nhận yêu cầu hiện hành trước khi nộp hồ sơ.</p>
+        <p><strong>Thông thường bạn sẽ cần:</strong></p>
+        <ul><li>Bằng lái nước ngoài còn hiệu lực + bản dịch tiếng Nhật chính thức (JAF)</li><li>Hộ chiếu chứng minh đã ở nước cấp bằng từ 3 tháng trở lên sau khi được cấp bằng</li><li>Thẻ cư trú (Residence Card)</li></ul>
+        <p>Hồ sơ được tiếp nhận tại Sapporo Driver's License Center, cách Niseko khoảng 2 giờ.</p>
+        <p><a href="https://www.police.pref.hokkaido.lg.jp/guide/menkyo/gai_menkyo-kirikae.html" target="_blank" class="info-link">Cảnh sát Hokkaido — Thông tin chuyển đổi bằng lái</a></p>
+      `,
+
+      36: `
+        <p>Nếu bạn không có bất kỳ bằng lái nào, bạn sẽ phải đăng ký tại một trường dạy lái xe được cấp phép và hoàn thành toàn bộ khóa học, sau đó thi các kỳ thi giống như công dân Nhật Bản. Con đường này mất nhiều thời gian hơn và tốn kém hơn đáng kể so với việc chuyển đổi bằng lái sẵn có — hãy dự trù vài tuần và một khoản chi phí không nhỏ.</p>
+        <p>Các buổi học tại những trường này chỉ được giảng dạy bằng tiếng Nhật, nên bạn sẽ cần sự hỗ trợ của một đồng nghiệp nói tiếng Nhật để đăng ký và theo học.</p>
+        <p><strong>Các trường dạy lái xe gần đây:</strong></p>
+        <ul><li><a href="http://kutchan-ds.o.oo7.jp/" target="_blank" class="link-name">Kutchan Driving School (倶知安自動車学校)</a> — Hirafu, Kutchan<br>T. 0136-22-1573</li><li><a href="https://www.keishin-g.com/yoichi/" target="_blank" class="link-name">Yoichi Driving School (余市自動車学校)</a> — Yoichi, ~45 km<br>T. 0135-22-3393</li><li><a href="https://www.hokkaidochuo.co.jp/otaru" target="_blank" class="link-name">Otaru Chuo Driving School (小樽中央自動車学校)</a> — Otaru, ~55 km<br>T. 0134-26-3515</li></ul>
+      `,
+      38: `
         <p>Căng-tin Utari mở cửa từ 7 giờ sáng đến 7 giờ tối hàng ngày với 4 thực đơn mỗi ngày, góc salad tươi và góc bánh mì. Trong những ngày làm việc, chúng tôi có sẵn hai phiếu ăn.</p>
         <p>Mỗi năm một lần, chúng tôi bình chọn món ăn yêu thích của mình và món đó sẽ được thêm vào thực đơn, ngoài ra chúng tôi còn có kem Häagen-Dazs mỗi ngày với các hương vị mới (cần 1 phiếu ăn). Để nhận phiếu ăn, chỉ cần quét thẻ ID của bạn tại máy quét ở lối vào.</p>
         <p>Căng-tin Utari là nơi để nghỉ ngơi và chia sẻ những câu chuyện với đồng nghiệp trong giờ nghỉ của bạn. Xin lưu ý rằng các bữa ăn phải được dùng trong giờ làm việc.</p>
       `,
-      36: `
+      40: `
         <p>Một trong những đặc quyền tốt nhất khi làm việc tại đây chính là ngọn núi này. Đội ngũ Nhân sự cung cấp những tấm vé lên núi hàng ngày này. Đó là tấm vé đưa bạn đến với lớp tuyết bột nổi tiếng thế giới ngay ngoài cửa nhà chúng ta.</p>
         <div class="alert-box">Tấm vé này là của cá nhân bạn và tuyệt đối không được chia sẻ với bất kỳ ai khác.</div>
         <p>Vui lòng kiểm tra với Đội ngũ Nhân sự xem bạn có đủ điều kiện nhận vé trượt tuyết dựa trên tình trạng việc làm của bạn hay không. Tất cả mọi người đều bắt buộc phải mua bảo hiểm trách nhiệm đối với bên thứ ba cho các hoạt động trên tuyết.</p>
       `,
-      38: `
+      42: `
         <p>Tất cả các Thành viên Đội ngũ đều được giảm giá 50% tại các nhà hàng của chúng tôi. Hãy hỏi quản lý của bạn để biết chi tiết và các khoảng thời gian không áp dụng.</p>
         <ul><li><strong>Goshiki</strong> — Năm Sắc Màu, Một Sự Hài Hòa!</li><li><strong>Zento</strong> — Truyền thống châu Á cùng sự trù phú của Hokkaido.</li><li><strong>Melt Bar &amp; Grill</strong> — Buffet Ăn Thỏa Thích.</li><li><strong>The Flame</strong> — Lửa, Món Ăn &amp; Rượu Vang. Nhạc Jazz Trực Tiếp Hàng Ngày.</li><li><strong>Ezo Pub</strong> — Burger &amp; Sushi Ăn Thỏa Thích.</li><li><strong>Sisam</strong> — Nhà Hàng Nhật Bản.</li></ul>
       `,
